@@ -1,0 +1,14 @@
+{
+  "schema_version": "mst-bridge/1",
+  "name": "Synthetic CHS cantilever",
+  "coordinate_system": "right_handed_Z_up",
+  "units": "geometry:m;sections:mm;force:kN;moment:kNm;stress:MPa;rotation:rad",
+  "nodes": [{"id": "base", "xyz_m": [0,0,0]}, {"id": "tip", "xyz_m": [3,0,0]}],
+  "members": [{"id": "beam-001", "node_i": "base", "node_j": "tip", "section_id": "CHS114x4"}],
+  "materials": [{"id": "steel", "name": "Q235 research assumption", "E_MPa": 206000, "G_MPa": 79000, "poisson": 0.3, "density_kg_m3": 7850, "provenance": "Synthetic test parameters, not project design data"}],
+  "sections": [{"id": "CHS114x4", "material_id": "steel", "shape": "CHS", "dimensions_mm": {"D":114,"t":4}, "provenance": "Synthetic test"}],
+  "supports": [{"id":"fixed-base", "node_id":"base", "fixed":[true,true,true,true,true,true], "provenance":"Synthetic cantilever boundary"}],
+  "load_cases": [{"id":"tip-load", "kind":"dead", "loads":[{"node_id":"tip","force_kN":[0,0,-1],"moment_kNm":[0,0,0]}], "provenance":"Synthetic concentrated tip force"}],
+  "assumptions": ["Small displacement Euler-Bernoulli beam", "No selfweight", "All joints rigid"],
+  "automatic_self_weight": false
+}

@@ -1,0 +1,6 @@
+{
+  "operations": [
+    {"collection":"nodes", "id":"tip", "operation":"upsert", "item":{"id":"tip","xyz_m":[4,0,0]}},
+    {"collection":"load_cases", "id":"tip-load", "operation":"upsert", "item":{"id":"tip-load","kind":"dead","loads":[{"node_id":"tip","force_kN":[0,0,-2],"moment_kNm":[0,0,0]}],"provenance":"Synthetic edited concentrated force"}}
+  ]
+}

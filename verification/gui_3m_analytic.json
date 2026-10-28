@@ -1,0 +1,28 @@
+{
+  "beam_fields_csv_sha256": "9d37bf128fecab157d6ca06156861e4a669fcb4440c9c56a6cca40722b0b3c24",
+  "displacement_csv_sha256": "545febc031592f9645889b7c8593f79441f7be9ff7aac7d7d1e0c3e9f4ef690c",
+  "expected_tip_ry_rad": 0.010434543804032755,
+  "expected_tip_uz_mm": -20.86908760806551,
+  "field_stations": 11,
+  "length_m": 3.0,
+  "max_sampled_curve_error_mm": 1.5185214058410779e-06,
+  "native_hashes": {
+    "grd": "e3994c0668bb8d03382ba3fd163cb8aab6a50614394db398689b30465a1e09d0",
+    "log": "057f5488352a3de4c4ca10c9b55e21c88b2d553a5501623114d79004b45c1a6f"
+  },
+  "native_tip_ry_rad": 0.010434544645249844,
+  "native_tip_uz_mm": -20.869089126586914,
+  "rotation_error_rad": 8.412170890426118e-10,
+  "scope": "synthetic linear CHS cantilever analytic validation, not validation of an engineering roof",
+  "status": "PASS",
+  "tip_displacement_error_mm": 1.5185214058410779e-06,
+  "tolerance_displacement_mm": 0.0001,
+  "tolerance_rotation_rad": 1e-08,
+  "verified_model_binding": {
+    "canonical_model_sha256": "33713e9b1d28bf60c335d49bec04e02ef92ecd8b78458dde88aaf2463063f343",
+    "comparison_receipt_sha256": "e29f89ef7fa3670916dfbd645bc384eecce0c4c1f8299921fc6182a4833c9351",
+    "mapping_sha256": "0d5d5ffcd3303f8435fddbf7dc7ae9b6342db2dcd79b41317da572c410ea40cc",
+    "prepared_log_sha256": "37b7f256512f50bb2b71493d6068a9330b5fc9967fef8ba6f0a53bcb1df3514f"
+  },
+  "vertical_tip_force_kN": -1.0
+}

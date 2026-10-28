@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+work/
+*.grd
+*.3dm
+*.pdf
+*.exe
+*.dll
+.env
+.env.*
+

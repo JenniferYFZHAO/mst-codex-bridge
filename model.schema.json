@@ -1,0 +1,458 @@
+{
+  "$defs": {
+    "LoadCase": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "dead",
+            "live"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "loads": {
+          "items": {
+            "$ref": "#/$defs/NodalLoad"
+          },
+          "title": "Loads",
+          "type": "array"
+        },
+        "provenance": {
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "loads",
+        "provenance"
+      ],
+      "title": "LoadCase",
+      "type": "object"
+    },
+    "Material": {
+      "additionalProperties": false,
+      "properties": {
+        "E_MPa": {
+          "exclusiveMinimum": 0,
+          "title": "E Mpa",
+          "type": "number"
+        },
+        "G_MPa": {
+          "exclusiveMinimum": 0,
+          "title": "G Mpa",
+          "type": "number"
+        },
+        "density_kg_m3": {
+          "exclusiveMinimum": 0,
+          "title": "Density Kg M3",
+          "type": "number"
+        },
+        "id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "mst_class": {
+          "const": 0,
+          "default": 0,
+          "title": "Mst Class",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "poisson": {
+          "exclusiveMaximum": 0.5,
+          "exclusiveMinimum": -1,
+          "title": "Poisson",
+          "type": "number"
+        },
+        "provenance": {
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "E_MPa",
+        "G_MPa",
+        "poisson",
+        "density_kg_m3",
+        "provenance"
+      ],
+      "title": "Material",
+      "type": "object"
+    },
+    "Member": {
+      "additionalProperties": false,
+      "properties": {
+        "alpha_deg": {
+          "const": 0,
+          "default": 0,
+          "title": "Alpha Deg",
+          "type": "integer"
+        },
+        "formulation": {
+          "const": "rigid_EB_beam",
+          "default": "rigid_EB_beam",
+          "title": "Formulation",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "node_i": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Node I",
+          "type": "string"
+        },
+        "node_j": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Node J",
+          "type": "string"
+        },
+        "section_id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Section Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "node_i",
+        "node_j",
+        "section_id"
+      ],
+      "title": "Member",
+      "type": "object"
+    },
+    "NodalLoad": {
+      "additionalProperties": false,
+      "properties": {
+        "force_kN": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Force Kn",
+          "type": "array"
+        },
+        "moment_kNm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Moment Knm",
+          "type": "array"
+        },
+        "node_id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Node Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "node_id",
+        "force_kN",
+        "moment_kNm"
+      ],
+      "title": "NodalLoad",
+      "type": "object"
+    },
+    "Node": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "xyz_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Xyz M",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "xyz_m"
+      ],
+      "title": "Node",
+      "type": "object"
+    },
+    "Section": {
+      "additionalProperties": false,
+      "properties": {
+        "dimensions_mm": {
+          "additionalProperties": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "title": "Dimensions Mm",
+          "type": "object"
+        },
+        "id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "material_id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Material Id",
+          "type": "string"
+        },
+        "provenance": {
+          "title": "Provenance",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "CHS",
+            "RHS",
+            "I"
+          ],
+          "title": "Shape",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "material_id",
+        "shape",
+        "dimensions_mm",
+        "provenance"
+      ],
+      "title": "Section",
+      "type": "object"
+    },
+    "Support": {
+      "additionalProperties": false,
+      "properties": {
+        "fixed": {
+          "maxItems": 6,
+          "minItems": 6,
+          "prefixItems": [
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "const": true,
+              "type": "boolean"
+            }
+          ],
+          "title": "Fixed",
+          "type": "array"
+        },
+        "id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "node_id": {
+          "maxLength": 96,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Node Id",
+          "type": "string"
+        },
+        "provenance": {
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "node_id",
+        "fixed",
+        "provenance"
+      ],
+      "title": "Support",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "accept_mst_rhs_open_plate_torsion": {
+      "default": false,
+      "title": "Accept Mst Rhs Open Plate Torsion",
+      "type": "boolean"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "automatic_self_weight": {
+      "const": false,
+      "title": "Automatic Self Weight",
+      "type": "boolean"
+    },
+    "coordinate_system": {
+      "const": "right_handed_Z_up",
+      "title": "Coordinate System",
+      "type": "string"
+    },
+    "load_cases": {
+      "items": {
+        "$ref": "#/$defs/LoadCase"
+      },
+      "minItems": 1,
+      "title": "Load Cases",
+      "type": "array"
+    },
+    "materials": {
+      "items": {
+        "$ref": "#/$defs/Material"
+      },
+      "maxItems": 1,
+      "minItems": 1,
+      "title": "Materials",
+      "type": "array"
+    },
+    "members": {
+      "items": {
+        "$ref": "#/$defs/Member"
+      },
+      "minItems": 1,
+      "title": "Members",
+      "type": "array"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/Node"
+      },
+      "minItems": 2,
+      "title": "Nodes",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "mst-bridge/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/Section"
+      },
+      "minItems": 1,
+      "title": "Sections",
+      "type": "array"
+    },
+    "supports": {
+      "items": {
+        "$ref": "#/$defs/Support"
+      },
+      "minItems": 1,
+      "title": "Supports",
+      "type": "array"
+    },
+    "units": {
+      "const": "geometry:m;sections:mm;force:kN;moment:kNm;stress:MPa;rotation:rad",
+      "title": "Units",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "name",
+    "coordinate_system",
+    "units",
+    "nodes",
+    "members",
+    "materials",
+    "sections",
+    "supports",
+    "load_cases",
+    "assumptions",
+    "automatic_self_weight"
+  ],
+  "title": "Model",
+  "type": "object"
+}

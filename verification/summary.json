@@ -1,0 +1,196 @@
+{
+  "current_codex_session_mcp_hotloaded": false,
+  "date": "2026-10-28",
+  "design_check": {
+    "four_m_overstress_members": 1,
+    "four_m_reported_stress_MPa": 207.4,
+    "four_m_software_limit_MPa": 193.5,
+    "source": "visible MST GUI, preserved by desktop test operator",
+    "three_m_overstress_members": 0
+  },
+  "full_roof_regression": {
+    "cases": [
+      {
+        "case": "RESDEADLOAD",
+        "components": 10332,
+        "max_absolute_difference_to_previous_verified_reader": 0.0,
+        "nodes": 1722
+      },
+      {
+        "case": "RESLIVELOAD",
+        "components": 10332,
+        "max_absolute_difference_to_previous_verified_reader": 0.0,
+        "nodes": 1722
+      }
+    ],
+    "status": "PASS"
+  },
+  "github_published": false,
+  "global_mcp_config_modified": false,
+  "gui_cases": [
+    {
+      "beam_fields_csv_sha256": "9d37bf128fecab157d6ca06156861e4a669fcb4440c9c56a6cca40722b0b3c24",
+      "displacement_csv_sha256": "545febc031592f9645889b7c8593f79441f7be9ff7aac7d7d1e0c3e9f4ef690c",
+      "expected_tip_ry_rad": 0.010434543804032755,
+      "expected_tip_uz_mm": -20.86908760806551,
+      "field_stations": 11,
+      "length_m": 3.0,
+      "max_sampled_curve_error_mm": 1.5185214058410779e-06,
+      "native_hashes": {
+        "grd": "e3994c0668bb8d03382ba3fd163cb8aab6a50614394db398689b30465a1e09d0",
+        "log": "057f5488352a3de4c4ca10c9b55e21c88b2d553a5501623114d79004b45c1a6f"
+      },
+      "native_tip_ry_rad": 0.010434544645249844,
+      "native_tip_uz_mm": -20.869089126586914,
+      "rotation_error_rad": 8.412170890426118e-10,
+      "scope": "synthetic linear CHS cantilever analytic validation, not validation of an engineering roof",
+      "status": "PASS",
+      "tip_displacement_error_mm": 1.5185214058410779e-06,
+      "tolerance_displacement_mm": 0.0001,
+      "tolerance_rotation_rad": 1e-08,
+      "verified_model_binding": {
+        "canonical_model_sha256": "33713e9b1d28bf60c335d49bec04e02ef92ecd8b78458dde88aaf2463063f343",
+        "comparison_receipt_sha256": "e29f89ef7fa3670916dfbd645bc384eecce0c4c1f8299921fc6182a4833c9351",
+        "mapping_sha256": "0d5d5ffcd3303f8435fddbf7dc7ae9b6342db2dcd79b41317da572c410ea40cc",
+        "prepared_log_sha256": "37b7f256512f50bb2b71493d6068a9330b5fc9967fef8ba6f0a53bcb1df3514f"
+      },
+      "vertical_tip_force_kN": -1.0
+    },
+    {
+      "beam_fields_csv_sha256": "bfd9cc14feb551fab878398fc0288375a533475a114f2a77cbbbcf976e90e8c4",
+      "displacement_csv_sha256": "2f162ab5bb32837fd68638e8ffc627f4a9482326988b63c293224dce76433bfd",
+      "expected_tip_ry_rad": 0.03710060019211646,
+      "expected_tip_uz_mm": -98.9349338456439,
+      "field_stations": 11,
+      "length_m": 4.0,
+      "max_sampled_curve_error_mm": 1.03071881446537e-05,
+      "native_hashes": {
+        "grd": "4d79b86548fd034d18dc4c4b22ea9e093ffeb8600afd0b8ded52b375ad2df8fa",
+        "log": "df0e6c791d512ded07557c888751a0c2917ccaef47706a9d22edd388e81aedb4"
+      },
+      "native_tip_ry_rad": 0.03710060194134712,
+      "native_tip_uz_mm": -98.93494415283203,
+      "rotation_error_rad": 1.7492306630950694e-09,
+      "scope": "synthetic linear CHS cantilever analytic validation, not validation of an engineering roof",
+      "status": "PASS",
+      "tip_displacement_error_mm": 1.03071881446537e-05,
+      "tolerance_displacement_mm": 0.0001,
+      "tolerance_rotation_rad": 1e-08,
+      "verified_model_binding": {
+        "canonical_model_sha256": "ca69d4c14bae5cafc2f379df6f0312efd86a5b526d17da0237217f028725f0c6",
+        "comparison_receipt_sha256": "401e2f5b7d604e80cf8f5896bd043fb864716798175d7fc48edd8379b07e7746",
+        "mapping_sha256": "0d5d5ffcd3303f8435fddbf7dc7ae9b6342db2dcd79b41317da572c410ea40cc",
+        "prepared_log_sha256": "b9df817ded67e7fefccab7f2059d2f07ab156dbf108a76401de4d175922f6228"
+      },
+      "vertical_tip_force_kN": -2.0
+    }
+  ],
+  "independent_review": {
+    "cross_paired_grd_log_rejected": true,
+    "csv_mutation_rejected": true,
+    "failed_ingest_does_not_claim_csv": true,
+    "rounded_only_beam_recovery_rejected": true,
+    "status": "PASS",
+    "swapped_source_ids_rejected": true,
+    "wrong_model_rejected": true
+  },
+  "license_selected": false,
+  "mcp": {
+    "calls": [
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_capabilities"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_create"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_inspect"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_validate"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_prepare"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_compare"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_ingest"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_recover_beams"
+      },
+      {
+        "error_observed": false,
+        "expected_error": false,
+        "tool": "mst_edit"
+      },
+      {
+        "error_observed": true,
+        "expected_error": true,
+        "tool": "mst_create"
+      },
+      {
+        "error_observed": true,
+        "expected_error": true,
+        "tool": "mst_inspect"
+      },
+      {
+        "error_observed": true,
+        "expected_error": true,
+        "tool": "mst_create"
+      }
+    ],
+    "mcp_sdk": "1.30.0",
+    "protocol": "2025-11-25",
+    "registered_in_current_codex_session": false,
+    "scope": "actual SDK initialize/list_tools/call_tool with filesystem outputs and failure checks; no MST GUI",
+    "status": "PASS",
+    "tools": [
+      "mst_capabilities",
+      "mst_compare",
+      "mst_create",
+      "mst_edit",
+      "mst_ingest",
+      "mst_inspect",
+      "mst_prepare",
+      "mst_recover_beams",
+      "mst_validate"
+    ],
+    "transport": "stdio subprocess"
+  },
+  "native_api_or_unattended_solver_claim": false,
+  "project_skill_installed": true,
+  "project_skill_sha256": "10107dc95d66bdd918f81e69364fb591426fd48571d4d9409566051a3be1f815",
+  "pytest": {
+    "count": 27,
+    "exit_code": 0,
+    "summary": "...........................                                              [100%]\n27 passed in 0.90s"
+  },
+  "real_reimport_negative": {
+    "extra_load_kN": 1.0,
+    "problems": [
+      "NODAL_LOAD_MISMATCH:('dead', 0, 2)"
+    ],
+    "status": "REJECTED_AS_EXPECTED"
+  },
+  "status": "PASS",
+  "training_label_release": false
+}

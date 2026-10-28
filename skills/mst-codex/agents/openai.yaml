@@ -1,0 +1,4 @@
+interface:
+  display_name: "MST结构建模桥接"
+  short_description: "以可审计文件桥接创建和修改 MST2008 模型，并验证读回结果"
+  default_prompt: "请使用 $mst-codex 创建或修改本项目的 MST 模型，执行界面求解并核验导出结果。"

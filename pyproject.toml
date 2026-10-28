@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mst-codex-bridge"
+version = "0.1.0"
+description = "Auditable file bridge for structural MST2008, with CLI and MCP stdio tools"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "JenniferYFZHAO"}]
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.30,<2", "numpy>=1.26,<3", "pydantic>=2.11,<3"]
+
+[project.urls]
+Repository = "https://github.com/JenniferYFZHAO/mst-codex-bridge"
+Issues = "https://github.com/JenniferYFZHAO/mst-codex-bridge/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+mst-bridge = "mst_codex_bridge.cli:main"
+mst-bridge-mcp = "mst_codex_bridge.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

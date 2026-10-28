@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "transport": "stdio subprocess",
+  "protocol": "2025-11-25",
+  "mcp_sdk": "1.30.0",
+  "tools": [
+    "mst_capabilities",
+    "mst_compare",
+    "mst_create",
+    "mst_edit",
+    "mst_ingest",
+    "mst_inspect",
+    "mst_prepare",
+    "mst_recover_beams",
+    "mst_validate"
+  ],
+  "calls": [
+    {
+      "tool": "mst_capabilities",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_create",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_inspect",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_validate",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_prepare",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_compare",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_ingest",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_recover_beams",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_edit",
+      "expected_error": false,
+      "error_observed": false
+    },
+    {
+      "tool": "mst_create",
+      "expected_error": true,
+      "error_observed": true
+    },
+    {
+      "tool": "mst_inspect",
+      "expected_error": true,
+      "error_observed": true
+    },
+    {
+      "tool": "mst_create",
+      "expected_error": true,
+      "error_observed": true
+    }
+  ],
+  "scope": "actual SDK initialize/list_tools/call_tool with filesystem outputs and failure checks; no MST GUI",
+  "registered_in_current_codex_session": false
+}
